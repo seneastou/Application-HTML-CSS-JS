@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const quotes = [
+  const quotes = [
         "La vie est ce qui arrive quand vous êtes occupé à faire d'autres plans. - John Lennon",
         "L'important n'est pas de convaincre, mais de donner à réfléchir. - Bernard Werber",
         "L'éducation est l'arme la plus puissante pour changer le monde. - Nelson Mandela",
@@ -37,5 +36,4 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.toggle("show");
     });
 
-});
 

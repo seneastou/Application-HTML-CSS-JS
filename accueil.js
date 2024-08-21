@@ -1,8 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuBurger = document.getElementById("menuBurger");
-    const menu = document.getElementById("menu");
+const menuBurger = document.getElementById("menuBurger");
+const menu = document.getElementById("menu");
 
-    menuBurger.addEventListener("click", function() {
-        menu.classList.toggle("show");
-    });
+menuBurger.addEventListener("click", function() {
+    menu.classList.toggle("show");
 });
