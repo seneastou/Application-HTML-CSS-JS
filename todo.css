@@ -1,0 +1,218 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #e80564;
+    padding: 10px 20px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90.5vh;
+    margin: 0;
+    background-image: url(image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu-burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.list{
+    margin: 0 15px;
+}
+
+
+ a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.champs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.li {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+ion-icon {
+    font-size: 30px;
+    margin-right: 5px;
+    background-color: green;
+    color: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+ion-icon:hover{
+    background-color: rgb(119, 232, 119);
+}
+
+.delete{
+    background-color: crimson;
+
+}
+
+.delete:hover{
+    background-color: red;
+}
+.modify {
+    background-color: #e7bc0d;
+    color: #333;
+}
+
+.modify:hover{
+    background-color: #ffff00;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    .champs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    input {
+        margin-bottom: 5px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .li {
+        width: 95%;
+    
+    }
+    
+    button {
+        margin: 5px 0;
+    }
+    .menu-burger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #e80564;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .list {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .li {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    ion-icon {
+        font-size: 25px;
+        padding: 0.4rem;
+    }
+    
+    .delete, .modify {
+        font-size: 20px;
+    }
+}
