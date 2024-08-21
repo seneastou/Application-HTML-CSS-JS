@@ -99,6 +99,8 @@ footer {
 
 .box-contain:hover {
     border-top: 15px solid #e80564;
+    box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, .15);
+    height: 350px;
 }
 
 a:hover{

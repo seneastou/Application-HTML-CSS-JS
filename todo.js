@@ -1,8 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    loadTasks();
-});
-
-function addTask() {
+   loadTasks();
+   function addTask() {
     let taskInput = document.getElementById("taskInput");
     let taskList = document.getElementById("taskList");
     let taskText = taskInput.value.trim();

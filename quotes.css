@@ -60,10 +60,6 @@ a {
     font-weight: bold;
 }
 
-a:hover{
-    text-decoration: underline;
-}
-
 .container{
     text-align: center;
     background-color: beige;
