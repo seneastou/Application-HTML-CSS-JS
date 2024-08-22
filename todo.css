@@ -15,13 +15,9 @@ header {
     
 }
 
-header h3 {
-    margin: 0;
-}
-
-nav {
+/* nav {
     position: relative;
-}
+} */
 
 main{
     display: flex;
@@ -158,10 +154,6 @@ ion-icon:hover{
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 5px;
-    }
-    
     .champs {
         flex-direction: column;
         align-items: stretch;
@@ -181,19 +173,22 @@ ion-icon:hover{
     button {
         margin: 5px 0;
     }
+
     .menu-burger {
         display: flex;
+        position: absolute;
+        right: 20px;
     }
 
     .menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 100%;
-        right: 0;
+        top: 50px;
+        left: 0;
         background-color: #e80564;
         width: 100%;
-        
+        text-align: center;
     }
 
     .menu.show {
@@ -201,7 +196,6 @@ ion-icon:hover{
     }
 
     .menu .nav-item {
-        text-align: center;
         margin: 15px 0;
     }
 }

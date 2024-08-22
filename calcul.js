@@ -2,6 +2,7 @@
     const buttons = document.querySelectorAll('button');
     let expression = "";
     let isOperatorActive = false;
+    let operatorhover = null;
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -11,6 +12,9 @@
                 inputBox.value = ''
                 expression = ''
                 isOperatorActive = false;
+                if (operatorhover) {
+                operatorhover.classList.remove('active');
+            }
             }
             else if (value === 'DE') {
                 inputBox.value = inputBox.value.slice(0, -1);
@@ -30,29 +34,51 @@
                     console.log(exception)
                     expression = '';
                 }
+                if (operatorhover) {
+                operatorhover.classList.remove('active');
+            }
             } 
             else if(button.classList.contains('operator')){
-                isOperatorActive = true;
-                expression += value;
+                if (isOperatorActive) {
+                // Supprimer le dernier opérateur si un nouveau est saisi immédiatement après
+                expression = expression.slice(0, -1);
+            }
+
+            // Ajouter le nouvel opérateur pour faire le calcul
+            expression += value;
+
+            if (operatorhover) {
+                operatorhover.classList.remove('active');
+            }
+               button.classList.add('active');
+               operatorhover = button;
+
+               isOperatorActive = true;
+               
             }
             else
             {
-                expression += value;
                 if(isOperatorActive){
-                    inputBox.value = expression.slice(-1);
+                    
+                    inputBox.value = value;
+                    isOperatorActive = false;
                 }
                 else{
                     inputBox.value += value;
                 }
+                expression += value;
+                if (operatorhover) {
+                operatorhover.classList.remove('active');
+            }
             }
 
          });
     });
      
-    const menuBurger = document.getElementById("menuBurger");
-    const menu = document.getElementById("menu");
-    menuBurger.addEventListener("click", function() {
-        menu.classList.toggle("show");
+              const menuBurger = document.getElementById("menuBurger");
+              const menu = document.getElementById("menu");
+              menuBurger.addEventListener("click", function() {
+              menu.classList.toggle("show");
     });
 
 

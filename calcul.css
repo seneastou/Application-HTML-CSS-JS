@@ -142,6 +142,10 @@ a:hover{
     background-color: #1991ff;
 }
 
+.operator.active{
+    background-color: white;
+    color: #005db2 ;
+}
 button:hover{
     background-color: lightgrey;
 }
