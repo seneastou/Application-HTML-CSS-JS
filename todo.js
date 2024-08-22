@@ -83,9 +83,10 @@ function loadTasks() {
         taskList.appendChild(li);
     });
     
-    const menuBurger = document.getElementById("menuBurger");
-    const menu = document.getElementById("menu");
-    menuBurger.addEventListener("click", function() {
-        menu.classList.toggle("show");
-    });
+    fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur de chargement du header:', error));
 }

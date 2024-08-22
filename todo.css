@@ -4,21 +4,6 @@ body{
     padding: 0;
 }
 
-header {
-    background-color: #e80564;
-    padding: 10px 20px;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    
-}
-
-/* nav {
-    position: relative;
-} */
-
 main{
     display: flex;
     justify-content: center;
@@ -31,42 +16,6 @@ main{
     background-position: center;
     background-size: cover;
 }
-
-.menu-burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.menu .nav-item {
-    margin: 0 15px;
-}
-
-
-.menu .nav-item a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.menu .nav-item a:hover{
-    text-decoration: underline;
-}
-
 
 .container{
     width: 100%;
@@ -112,7 +61,6 @@ button {
 }
 
 .task-list li {
-    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -172,31 +120,6 @@ ion-icon:hover{
     
     button {
         margin: 5px 0;
-    }
-
-    .menu-burger {
-        display: flex;
-        position: absolute;
-        right: 20px;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background-color: #e80564;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu.show {
-        display: flex;
-    }
-
-    .menu .nav-item {
-        margin: 15px 0;
     }
 }
 

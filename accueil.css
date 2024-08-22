@@ -6,53 +6,14 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #e80564;
-    padding: 10px 20px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    font-weight: bold;
-    
-}
 
 .img1{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+   
 }
 
-.menu-burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-li {
-    margin: 0 15px;
-}
-
- a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 main {
     padding: 20px;
@@ -104,30 +65,7 @@ a:hover{
 }
 
 @media (max-width: 768px) {
-    .menu-burger {
-        display: flex;
-        margin-right: 50px;
     
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0px;
-        background-color: #e80564;
-        width: 100%;
-        text-align: center;
-    }
-
-    .menu.show {
-        display: flex;
-    }
-
-    li {
-        margin: 15px 0;
-    }
     .section {
         justify-content: center;
         align-items: center;
