@@ -3,6 +3,7 @@
     let expression = "";
     let isOperatorActive = false;
     let operatorhover = null;
+    let resetExpression = false;
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -12,6 +13,7 @@
                 inputBox.value = ''
                 expression = ''
                 isOperatorActive = false;
+
                 if (operatorhover) {
                 operatorhover.classList.remove('active');
             }
@@ -28,6 +30,7 @@
                     }
                     inputBox.value = eval(expression);
                     expression = inputBox.value;
+                    resetExpression = true;
 
                 } catch (exception) {
                     inputBox.value = 'Erreur';
@@ -55,15 +58,20 @@
 
                isOperatorActive = true;
                
-            }
-            else
-            {
+            }else {
+            // Réinitialiser l'expression si un chiffre est cliqué après un résultat
+            if (resetExpression) {
+                inputBox.value = value;
+                expression = value; // Réinitialiser l'expression avec le nouveau chiffre
+                resetExpression = false;
+
+            } else {
                 if(isOperatorActive){
                     
                     inputBox.value = value;
                     isOperatorActive = false;
                 }
-                else{
+                else {
                     inputBox.value += value;
                 }
                 expression += value;
@@ -71,14 +79,26 @@
                 operatorhover.classList.remove('active');
             }
             }
-
+            }
          });
     });
      
-              fetch('header.html')
+        fetch('header.html')
             .then(response => response.text())
             .then(data => {
+                
                 document.getElementById('header').innerHTML = data;
+
+                const menuBurger = document.getElementById("menuBurger");
+                const menu = document.getElementById("menu");
+
+                if (menuBurger && menu) {
+                    menuBurger.addEventListener("click", function() {
+                        menu.classList.toggle("show");
+                    });
+                } else {
+                    console.error("Erreur");
+                }
             })
             .catch(error => console.error('Erreur de chargement du header:', error));
 

@@ -1,7 +1,5 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -37,10 +35,9 @@ main {
     height: 300px;
     padding: 10px;
     border-radius: 10px;
-    position: relative;
 
 }
-h1, h2 {
+h1 {
     color: #e80564;
 }
 
@@ -52,16 +49,13 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    
 }
 
 .box-contain:hover {
     border-top: 15px solid #e80564;
     box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, .15);
     height: 350px;
-}
-
-a:hover{
-    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -71,4 +65,10 @@ a:hover{
         align-items: center;
         flex-direction: column;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+     .box-contain{
+        width: 200px;
+     }
 }
