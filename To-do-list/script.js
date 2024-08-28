@@ -83,7 +83,7 @@ function loadTasks() {
         taskList.appendChild(li);
     });
     
-    fetch('/Header/header.html')
+    fetch('/Header')
             .then(response => response.text())
             .then(data => {
                 
