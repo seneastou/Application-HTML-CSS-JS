@@ -1,5 +1,5 @@
 // Récupération du header créer
-fetch("../Header/header.html")
+fetch("/Header/header.html")
             .then(response => response.text())
             .then(data => {
             
