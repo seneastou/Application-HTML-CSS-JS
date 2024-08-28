@@ -1,6 +1,6 @@
    const inputBox = document.getElementById('inputBox');
     const buttons = document.querySelectorAll('button');
-    let expression = "";
+    let expression = "";      
     let isOperatorActive = false;
     let operatorhover = null;
     let resetExpression = false;
