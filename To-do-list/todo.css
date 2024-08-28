@@ -103,6 +103,7 @@ ion-icon:hover{
 
 @media (max-width: 768px) {
     .champs {
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
     }
